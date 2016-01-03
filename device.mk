@@ -185,10 +185,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
+# Simple PowerHAL
+PRODUCT_PACKAGES += \
+    power.yukon
+
 # APN list
 PRODUCT_COPY_FILES += \
     device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-#    device/sample/etc/old-apns-conf.xml:system/etc/old-apns-conf.xml \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -213,19 +216,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Enable MultiWindow
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #    persist.sys.debug.multi_window=true
-
-# dtbtool
-PRODUCT_PACKAGES += \
-    dtbTool
-
-# Bootimg tools
-PRODUCT_PACKAGES += \
-    extract_elf_ramdisk
-
-# Recovery keycheck
-PRODUCT_PACKAGES += \
-    keycheck
-
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnGSMDevice=1
