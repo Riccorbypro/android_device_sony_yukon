@@ -117,8 +117,6 @@ endif
 BUILD_KERNEL := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += device/sony/yukon/sepolicy
-
-BOARD_SEPOLICY_UNISON += tad.te
+#BOARD_SEPOLICY_DIRS += device/sony/yukon/sepolicy
